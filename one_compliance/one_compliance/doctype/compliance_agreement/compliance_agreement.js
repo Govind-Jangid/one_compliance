@@ -17,7 +17,12 @@ frappe.ui.form.on('Compliance Agreement',{
       })
       frm.add_custom_button('Create Projects', () =>{
         // custom button to create projects from Compliance Agreement
-          frm.call('create_project_from_agreement')
+          frappe.call({
+            method: 'one_compliance.one_compliance.doctype.compliance_agreement.compliance_agreement.create_project_from_agreement',
+            args: {
+              name: frm.doc.name
+            }
+          })
       })
     }
     if(frm.doc.invoice_based_on){

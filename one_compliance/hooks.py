@@ -131,16 +131,19 @@ scheduler_events = {
 #	],
 	"daily": [
         'one_compliance.one_compliance.utils.task_daily_sheduler'
-	]
+        'one_compliance.one_compliance.utils.sent_email_notification',
+        'one_compliance.one_compliance.utils.create_and_assign_task_automatically'
+	],
+>>>>>>> Stashed changes
 #	"hourly": [
 #		"one_compliance.tasks.hourly"
 #	],
 #	"weekly": [
 #		"one_compliance.tasks.weekly"
 #	],
-#	"monthly": [
-#		"one_compliance.tasks.monthly"
-#	],
+	# "monthly": [
+    #
+	# ],
 }
 
 # Testing
